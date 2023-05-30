@@ -1,0 +1,89 @@
+/* =============
+    Product Description
+============= */
+
+.prod-desc{
+
+   &.content{
+        @include lg{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            "info photo";
+            gap: 47px;
+        }
+   } 
+    
+}
+
+.info{
+    grid-area: info;
+}
+
+.photo{
+    grid-area: photo;
+}
+
+.colors{
+
+    ul{
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "c1 c2 c3 c4 c5"
+        "c6 c7 c8 c9 c10";
+    }
+}
+
+.c1{
+    grid-area: c1;
+}
+
+.c2{
+    grid-area: c2;
+}
+
+.c3{
+    grid-area: c3;
+}
+
+.c4{
+    grid-area: c4;
+}
+
+.c5{
+    grid-area: c5;
+}
+
+.c6{
+    grid-area: c6;
+}
+
+.c7{
+    grid-area: c7;
+}
+
+.c8{
+    grid-area: c8;
+}
+
+.c9{
+    grid-area: c9;
+}
+
+.c10{
+    grid-area: c10;
+}
+
+.button{
+    background-color: $black;
+    color: $white;
+    padding: 10px 64px;
+    border-radius: 24px;
+    align-self: center;
+
+    @include lg{
+        align-self: left;
+    }
+}

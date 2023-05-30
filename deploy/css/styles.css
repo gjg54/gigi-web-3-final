@@ -18,10 +18,8 @@ html {
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -56,12 +54,9 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
 }
 
 /**
@@ -69,10 +64,8 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /* Text-level semantics
@@ -89,12 +82,9 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -112,10 +102,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /**
@@ -165,14 +153,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
@@ -180,8 +164,7 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input {
-  /* 1 */
+input { /* 1 */
   overflow: visible;
 }
 
@@ -190,8 +173,7 @@ input {
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select {
-  /* 1 */
+select { /* 1 */
   text-transform: none;
 }
 
@@ -240,18 +222,12 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
 }
 
 /**
@@ -274,10 +250,8 @@ textarea {
  */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
 }
 
 /**
@@ -293,10 +267,8 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 
 /**
@@ -311,10 +283,8 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /* Interactive
@@ -352,6 +322,20 @@ template {
 /* =============
     Base
 ============= */
+.container {
+  display: grid;
+  grid-template-columns: 162.75px auto 162.75px;
+  grid-template-areas: ". content .";
+}
+
+.content {
+  grid-area: content;
+}
+
+.content-spacing {
+  padding-top: 120px;
+}
+
 /* =============
     Typography
 ============= */
@@ -385,3 +369,309 @@ textarea {
 /* =============
     Footer
 ============= */
+footer {
+  background-color: #000;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "l1 l2 l3" "l4 l5 l6" "l7 l8 ." "l9 l10 ." "l11 l12 ." ". l13 ." ". l14 .";
+}
+
+.l1 {
+  grid-area: l1;
+}
+
+.l2 {
+  grid-area: l2;
+}
+
+.l3 {
+  grid-area: l3;
+}
+
+.l4 {
+  grid-area: l4;
+}
+
+.l5 {
+  grid-area: l5;
+}
+
+.l6 {
+  grid-area: l6;
+}
+
+.l7 {
+  grid-area: l7;
+}
+
+.l8 {
+  grid-area: l8;
+}
+
+.l9 {
+  grid-area: l9;
+}
+
+.l10 {
+  grid-area: l10;
+}
+
+.l11 {
+  grid-area: l11;
+}
+
+.l12 {
+  grid-area: l12;
+}
+
+.l13 {
+  grid-area: l13;
+}
+
+.l14 {
+  grid-area: l14;
+}
+
+.copyright {
+  align-self: right;
+}
+
+.socials {
+  display: inline;
+}
+
+/* =============
+    Information 
+============= */
+.information {
+  background-color: #DBE7F1;
+  color: #004177;
+  border-radius: 8px;
+  align-content: center;
+}
+@media (min-width: 992px) {
+  .information {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "info1 info2 info3" "info4 info5 info6";
+  }
+}
+
+.info1 {
+  grid-area: info1;
+}
+
+.info2 {
+  grid-area: info2;
+}
+
+.info3 {
+  grid-area: info3;
+}
+
+.info4 {
+  grid-area: info4;
+}
+
+.info5 {
+  grid-area: info5;
+}
+
+.info6 {
+  grid-area: info6;
+}
+
+.title {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  grid-template-areas: "name arrow";
+}
+
+.name {
+  grid-area: name;
+}
+
+.arrow {
+  grid-area: arrow;
+}
+
+/* =============
+    Product Description
+============= */
+@media (min-width: 992px) {
+  .prod-desc.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "info photo";
+    gap: 47px;
+  }
+}
+
+.info {
+  grid-area: info;
+}
+
+.photo {
+  grid-area: photo;
+}
+
+.colors ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "c1 c2 c3 c4 c5" "c6 c7 c8 c9 c10";
+}
+
+.c1 {
+  grid-area: c1;
+}
+
+.c2 {
+  grid-area: c2;
+}
+
+.c3 {
+  grid-area: c3;
+}
+
+.c4 {
+  grid-area: c4;
+}
+
+.c5 {
+  grid-area: c5;
+}
+
+.c6 {
+  grid-area: c6;
+}
+
+.c7 {
+  grid-area: c7;
+}
+
+.c8 {
+  grid-area: c8;
+}
+
+.c9 {
+  grid-area: c9;
+}
+
+.c10 {
+  grid-area: c10;
+}
+
+.button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 64px;
+  border-radius: 24px;
+  align-self: center;
+}
+@media (min-width: 992px) {
+  .button {
+    align-self: left;
+  }
+}
+
+/* =============
+    Reviews
+============= */
+.chart {
+  align-self: center;
+  grid-area: chart;
+}
+
+@media (min-width: 992px) {
+  .reviews {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-areas: "review1 chart" "review2 ." "review3 .";
+  }
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-areas: "photo name rating" ". date ." ". text ." ". comment like" ". share .";
+}
+
+.photo {
+  grid-area: photo;
+}
+
+.name {
+  grid-area: name;
+}
+
+.rating {
+  grid-area: rating;
+}
+
+.date {
+  grid-area: date;
+}
+
+.text {
+  grid-area: text;
+}
+
+.comment {
+  grid-area: comment;
+}
+
+.like {
+  grid-area: like;
+}
+
+.share {
+  grid-area: share;
+}
+
+/* =============
+    Suggested Products
+============= */
+.sp {
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .sp {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "racks buns kettle";
+  }
+}
+
+.racks {
+  grid-area: racks;
+}
+
+.buns {
+  grid-area: buns;
+}
+
+.kettle {
+  grid-area: kettle;
+}
+
+.words {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "name price" "serial .";
+}
+
+.name {
+  grid-area: name;
+}
+
+.price {
+  grid-area: price;
+}
+
+.serial {
+  grid-area: serial;
+}

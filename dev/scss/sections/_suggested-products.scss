@@ -1,0 +1,47 @@
+/* =============
+    Suggested Products
+============= */
+
+.sp{
+    align-items: center;
+
+        @include lg{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "racks buns kettle";
+    }
+}
+
+.racks{
+    grid-area: racks;
+}
+
+.buns{
+    grid-area: buns;
+}
+
+.kettle{
+    grid-area: kettle;
+}
+
+.words{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    "name price"
+    "serial .";
+
+}
+
+.name{
+    grid-area: name;
+}
+
+.price{
+    grid-area: price;
+}
+
+.serial{
+    grid-area: serial;
+}
