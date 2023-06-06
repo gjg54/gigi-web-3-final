@@ -1,0 +1,52 @@
+/* =============
+    Stores
+============= */
+
+a{
+    color: $black;
+    text-decoration: none;
+}
+
+.store-layout{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    "company link"
+    "site money";
+    border-radius: 8px;
+    background-color: $blue; 
+    width: 329px;
+    padding: 19px 16px;
+
+    @include lg{
+        display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    "company link"
+    "site money";
+    border-radius: 8px;
+    background-color: $blue; 
+    width: 551px;
+    padding: 21px 16px;
+    }
+}
+
+.company{
+    grid-area: company;
+}
+
+.link{
+    grid-area: link;
+}
+
+.site{
+    grid-area: site;
+}
+
+.money{
+    grid-area: money;
+}
+
+.store-spacing{
+    gap: 8px;
+}

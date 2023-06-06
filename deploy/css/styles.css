@@ -371,6 +371,7 @@ textarea {
 ============= */
 footer {
   background-color: #000;
+  color: #fff;
 }
 
 .links {
@@ -443,6 +444,18 @@ footer {
   display: inline;
 }
 
+.padding-footer {
+  padding: 40px 24px;
+}
+@media (min-width: 992px) {
+  .padding-footer {
+    padding-top: 36px;
+    padding-bottom: 36px;
+    padding-right: 64px;
+    padding-left: 269px;
+  }
+}
+
 /* =============
     Information 
 ============= */
@@ -496,6 +509,10 @@ footer {
 
 .arrow {
   grid-area: arrow;
+}
+
+.padding {
+  padding: 48px 56px;
 }
 
 /* =============
@@ -566,16 +583,22 @@ footer {
 }
 
 .button {
+  display: inline;
+  text-decoration: none;
   background-color: #000;
   color: #fff;
   padding: 10px 64px;
   border-radius: 24px;
-  align-self: center;
 }
 @media (min-width: 992px) {
   .button {
     align-self: left;
   }
+}
+
+.button-text-pd {
+  color: white;
+  text-decoration: none;
 }
 
 /* =============
@@ -632,6 +655,34 @@ footer {
   grid-area: share;
 }
 
+.button-text-rev {
+  color: #000;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.review1 {
+  grid-area: review1;
+}
+
+.review2 {
+  grid-area: review2;
+}
+
+.review3 {
+  grid-area: review3;
+}
+
+.review-border {
+  grid-area: review-border;
+  border-width: 1px;
+  border-radius: 8px;
+  border-color: #000;
+}
+
 /* =============
     Suggested Products
 ============= */
@@ -674,4 +725,117 @@ footer {
 
 .serial {
   grid-area: serial;
+}
+
+/* =============
+    Stores
+============= */
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.store-layout {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "company link" "site money";
+  border-radius: 8px;
+  background-color: #DBE7F1;
+  width: 329px;
+  padding: 19px 16px;
+}
+@media (min-width: 992px) {
+  .store-layout {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "company link" "site money";
+    border-radius: 8px;
+    background-color: #DBE7F1;
+    width: 551px;
+    padding: 21px 16px;
+  }
+}
+
+.company {
+  grid-area: company;
+}
+
+.link {
+  grid-area: link;
+}
+
+.site {
+  grid-area: site;
+}
+
+.money {
+  grid-area: money;
+}
+
+.store-spacing {
+  gap: 8px;
+}
+
+/* =============
+    Zipcode
+============= */
+form {
+  border-color: #000;
+  border-radius: 4px;
+}
+
+button {
+  color: #fff;
+  background-color: #000;
+  border-radius: 8px;
+}
+
+::placeholder {
+  color: #000;
+}
+
+/* =============
+    Thankyou
+============= */
+.thank {
+  align-content: center;
+  border: 1px;
+  border-radius: 8px;
+  border-color: #000;
+  padding: 16px;
+}
+
+/* =============
+    Product recap
+============= */
+.recap {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "p-name p-photo" "p-color p-qty";
+  border: 1px;
+  border-radius: 8px 8px 0px 0px;
+}
+@media (min-width: 992px) {
+  .recap {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "p-name p-photo" "p-color p-qty";
+    border-radius: 8px;
+  }
+}
+
+.p-name {
+  grid-area: p-name;
+}
+
+.p-photo {
+  grid-area: p-photo;
+}
+
+.p-color {
+  grid-area: p-color;
+}
+
+.p-qty {
+  grid-area: p-qty;
 }

@@ -1,0 +1,38 @@
+/* =============
+    Product recap
+============= */
+
+.recap{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    "p-name p-photo"
+    "p-color p-qty";
+    border: 1px;
+    border-radius: 8px 8px 0px 0px;
+
+    @include lg{
+        display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    "p-name p-photo"
+    "p-color p-qty";
+    border-radius: 8px;
+    }
+}
+
+.p-name{
+    grid-area: p-name;
+}
+
+.p-photo{
+    grid-area: p-photo;
+}
+
+.p-color{
+    grid-area: p-color;
+}
+
+.p-qty{
+    grid-area: p-qty;
+}
