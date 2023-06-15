@@ -1,0 +1,19 @@
+/* =============
+    Checkout
+============= */
+
+.checkout{
+    display: grid;
+    grid-template-columns: 162.75px 50% 50% 162.75px;
+    grid-template-areas: 
+    ". where what .";
+    margin-bottom: 10px;
+}
+
+.where{
+    grid-area: where;
+}
+
+.what{
+    grid-area: what;
+}

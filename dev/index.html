@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <title>Starting Template</title>
   </head>
@@ -12,17 +15,38 @@
   <body>
 
     <!--header-->
-<header>
-<div>
-    <img src="img/header/logo.png" alt="logo"/>
-    <img src="img/header/hamburger-menu.png" alt="hamburger menu"/>
-    <img src="img/header/search.png" alt="search button"/>
-    <img src="img/header/cart.png" alt="cart button"/>
-</div>
+    <header class="container">
+      <div class="content">
+          <div class="logo">
+              <img src="img/header/logo.png" alt="smeg logo"/>
+          </div>
+
+          <!-- Mobile Nav Icon, Won't Display on Desktop & Up-->
+          <div class="burger-container">
+              <button id="burger-btn">
+                  <img src="img/header/hamburger-menu.png" alt="burger menu"/>
+              </button>
+          </div>
+          
+          <!-- Menu Alters Between Mobile/Tablet & Desktop-->
+          <nav id="main-menu">
+              <div class="hide-for-lg">
+                  <button id="close-btn">
+                      <i class="fa-solid fa-xmark-large"></i>
+                  </button> 
+              </div>
+              <ul>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="checkout.html">Procucts</a></li>
+                  <li><a href="thankyou.html">Search</a></li>
+                  <li><a href="../index.html">Cart</a></li>
+              </ul>
+          </nav>
+      </div>
   </header>
   
   <!--product description-->
-  <section class="container content-spacing">
+  <section class="container content-spacing overall-padding">
   <div class="content prod-desc">
     
   
@@ -84,7 +108,7 @@
   <section class="container content-spacing">
 
 <div class="content information padding">
-  <div>
+  <div class="sec-info">
       <h3>Information</h3>
   </div>
   
@@ -198,7 +222,7 @@
   <section class="container content-spacing">
   
   <div class="content sp">
-    <div>
+    <div class="sec-sp">
       <h3>Suggested Products</h3>
     </div>
     
@@ -234,7 +258,7 @@
   <!--reviews-->
   <section class="container content-spacing">
   
-  <div class="content reviews">
+  <div class="content reviews rev-spacing">
     <div>
       <h3>Reviews</h3>
     </div>
@@ -243,121 +267,182 @@
       <img src="img/reviews/rating-chart.png" alt="rating chart"/>
     </div>
     
-    <div>
+    
       
-      <div class="review1 review-border">
-        <div class="layout">
-          <div>
-            <img class="photo" src="img/reviews/anthony.png" alt="anthony profile photo"/>
-            <h2 class="name">Anthony</h2>
+      <div class="review1">
+        <div class="layout rev-padding">
+          
+            <div class="profile">
+              <img src="img/reviews/anthony.png" alt="anthony profile photo"/>
+            </div>
+
+            <div class="details">
+              <h2>Anthony</h2>
+              <h3>4/8/22</h3>
+            </div>
+
             <div class="rating">
               <h2>3.5</h2> <img src="img/reviews/full-star.png" alt="stars"/>
             </div>
-            <h3 class="date">4/8/22</h3>
-          </div>
-          <div class="text">
+            
+          
+
+          <div class="word">
             <p>Bought this to replace a toaster that had somehow lasted 30 years. It does the job and seems very well made. Like other reviewers, I have found that you need to start on a low setting. The toasting is otherwise very even. It does not have a bagel setting so will always toast both sides. Also does not have a "lift" so sometimes it...
             </p>
             <a class="button-text-rev" href="#"> Read More </a>
           </div>
           
-          <div>
-            <ul>
-            <li class="comment"><img src="img/reviews/comment.png" alt="comment"/>   <a class="button-text-rev" href="#"> Comment </a></li>
-            <li class="like"><img src="img/reviews/like.png" alt="like"/>   <a class="button-text-rev" href="#"> Like </a></li>
-            <li class="share"><img src="img/reviews/share.png" alt="share"/>   <a class="button-text-rev" href="#"> Share </a></li>
-            </ul>
-          </div>
-        </div>
+         
+            
+
+            <div class="comment">
+              <img src="img/reviews/comment.png" alt="comment"/>   <a class="button-text-rev" href="#"> Comment </a>
+            </div>
+
+            <div class="like">
+              <img src="img/reviews/like.png" alt="like"/>   <a class="button-text-rev" href="#"> Like </a>
+            </div>
+
+            <div class="share">
+              <img src="img/reviews/share.png" alt="share"/>   <a class="button-text-rev" href="#"> Share </a>
+            </div>
+
+           
+          
+        
       </div>
       
-      <div class="review2 review-border">
-        <div class="layout">
-          <div>
-            <img class="photo" src="img/reviews/amanda.png" alt="amanda profile photo"/>
-            <h2 class="name">Amanda</h2>
+      <div class="review2">
+        <div class="layout rev-padding">
+          
+
+            <div class="profile">
+              <img src="img/reviews/amanda.png" alt="amanda profile photo"/>
+            </div>
+
+            <div class="details">
+              <h2>Amanda</h2>
+              <h3>5/23/21</h3>
+            </div>
+
             <div class="rating">
               <h2>4.5</h2> <img src="img/reviews/full-star.png" alt="stars"/>
             </div>
-            <h3 class="date">5/23/21</h3>
-          </div>
-          <div class="text">
+         
+
+          <div class="word">
             <p>This machine is incredibly beautiful. That's why it gets five stars. And it toasts bread. Bonus. It has a bagel button where only one side of the bagel gets toasted. Perfect. And the little pop-out crumb dish is darling and, bonus, useful!!! And a button to push if you are toasting something frozen. Nice.But it takes a bit of getting...
             </p>
             <a class="button-text-rev" href="#"> Read More </a>
           </div>
           
-          <div>
-            <ul>
-            <li class="comment"><img src="img/reviews/comment.png" alt="comment"/>   <a class="button-text-rev" href="#"> Comment </a></li>
-            <li class="like"><img src="img/reviews/like.png" alt="like"/>   <a class="button-text-rev" href="#"> Like </a></li>
-            <li class="share"><img src="img/reviews/share.png" alt="share"/>   <a class="button-text-rev" href="#"> Share </a></li>
-            </ul>
-          </div>
-        </div>
+          
+            
+
+            <div class="comment">
+              <img src="img/reviews/comment.png" alt="comment"/>   <a class="button-text-rev" href="#"> Comment </a>
+            </div>
+
+            <div class="like">
+              <img src="img/reviews/like.png" alt="like"/>   <a class="button-text-rev" href="#"> Like </a>
+            </div>
+
+            <div class="share">
+              <img src="img/reviews/share.png" alt="share"/>   <a class="button-text-rev" href="#"> Share </a>
+            </div>
+
+            
+          
+        
       </div>
       
       <div class="review3 review-border">
-        <div class="layout">
-          <div>
-            <img class="photo" src="img/reviews/steph.png" alt="steph profile photo"/>
-            <h2 class="name">Steph</h2>
+        <div class="layout rev-padding">
+          
+
+            <div class="profile">
+              <img src="img/reviews/steph.png" alt="steph profile photo"/>
+            </div>
+
+            <div class="details">
+              <h2>Steph</h2>
+              <h3>1/20/23</h3>
+            </div>
+
             <div class="rating">
               <h2>4.5</h2> <img src="img/reviews/full-star.png" alt="stars"/>
             </div>
-            <h3 class="date">1/20/23</h3>
-          </div>
-          <div class="text">
+          
+
+          <div class="word">
             <p>Still enjoying this toaster for the look and metal finish, but you just have to know that in terms of engineering this is a $30 toaster. It makes a cheap noise when the toast is done, and some of the time even sends the toast on the counter top because there is too much strength in the spring. I also had uneven toasting at...
             </p>
             <a class="button-text-rev" href="#"> Read More </a>
           </div>
           
-          <div>
-            <ul>
-            <li class="comment"><img src="img/reviews/comment.png" alt="comment"/>   <a class="button-text-rev" href="#"> Comment </a></li>
-            <li class="like"><img src="img/reviews/like.png" alt="like"/>   <a class="button-text-rev" href="#"> Like </a></li>
-            <li class="share"><img src="img/reviews/share.png" alt="share"/>   <a class="button-text-rev" href="#"> Share </a></li>
-            </ul>
-          </div>
-        </div>
+         
+            
+
+            <div class="comment">
+              <img src="img/reviews/comment.png" alt="comment"/>   <a class="button-text-rev" href="#"> Comment </a>
+            </div>
+
+            <div class="like">
+
+              <img src="img/reviews/like.png" alt="like"/>   <a class="button-text-rev" href="#"> Like </a>
+            </div>
+
+            <div class="share">
+             <img src="img/reviews/share.png" alt="share"/>   <a class="button-text-rev" href="#"> Share </a>
+            </div>
+
+            
+          
+        
       </div>
       
       <a class="button-text-rev" href="#"> See More </a>
-    </div>
+    
   </div>
 
   </section>
   
   <!--footer-->
-  <footer class="padding-footer">
+  <footer class="padding-footer footer-grid">
   
-<div>
+<div class="flogo">
   <img src="img/header/logo.png" alt="logo"/>
 </div>
 
-<div>
-  <ul class="links">
-  
-  <li class="l1">Company</li>
-  <li class="l2">Info</li>
-  <li class="l3">Support</li>
-  <li class="l4">Legal</li>
-  <li class="l5">Products</li>
-  <li class="l6">Contacts</li>
-  <li class="l7">Disclaimer</li>
-  <li class="l8">Aesthetics</li>
-  <li class="l9">Privacy Policy</li>
-  <li  class="l0">Inspiration</li>
-  <li class="l11">Cookie Notice</li>
-  <li class="l12">About</li>
-  <li class="l13">Venders</li>
-  <li class="l14">Smeg in the world</li>
-  
-  </ul>
-</div>
 
-<div>
+  
+  <div class="company">
+    <h4>Company</h4>
+    <h5>Legal</h5>
+    <h5>Disclaimer</h5>
+    <h5>Privacy Policy</h5>
+    <h5>Cookie Notice</h5>
+  </div>
+
+  <div class="finfo">
+    <h4>Info</h4>
+    <h5>Products</h5>
+    <h5>Aesthetic</h5>
+    <h5>Inspiration</h5>
+    <h5>About</h5>
+    <h5>Venders</h5>
+    <h5>Smeg in the world</h5>
+  </div>
+
+  <div class="support">
+    <h4>Support</h4>
+    <h5>Contacts</h5>
+  </div>
+  
+
+
+<div class="newsletter">
   <h6>Sign up for our newsletter</h6>
   <form action="#"> <input type="Email" placeholder="Email"> <button>Subscribe</button></form>
 </div>
@@ -367,12 +452,12 @@
 </div>
 
 <div class="socials">
-  <ul>
-    <li><img src="img/footer/instagram.png" alt="instagram"/></li>
-    <li><img src="img/footer/youtube.png" alt="youtube"/></li>
-    <li><img src="img/footer/facebook.png" alt="facebook"/></li>
-    <li><img src="img/footer/linkedin.png" alt="linkedin"/></li>
-  </ul>
+  
+    <img src="img/footer/instagram.png" alt="instagram"/>
+    <img src="img/footer/youtube.png" alt="youtube"/>
+    <img src="img/footer/facebook.png" alt="facebook"/>
+    <img src="img/footer/linkedin.png" alt="linkedin"/>
+  
 </div>
   </footer>
 

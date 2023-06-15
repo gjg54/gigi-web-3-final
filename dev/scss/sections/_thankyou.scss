@@ -7,5 +7,14 @@
     border: 1px;
     border-radius: 8px;
     border-color: $black;
-    padding: 16px; 
+    border-style: solid;
+    border-width: 314px;
+    padding: 16px;
+    
+    @include lg{
+        border-radius: 8px;
+        border-color: $black;
+        border-style: solid;
+        border-width: 462px;
+    }
 }

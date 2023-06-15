@@ -7,90 +7,52 @@ footer{
     color: $white;
 }
 
-.links{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.footer-grid{
+    display:grid;
+    grid-template-columns: 20% 10% 10% 10% 40%;
     grid-template-areas: 
-    "l1 l2 l3"
-    "l4 l5 l6"
-    "l7 l8 ."
-    "l9 l10 ."
-    "l11 l12 ."
-    ". l13 ."
-    ". l14 .";
-}
-
-.l1{
-    grid-area: l1;
-}
-
-.l2{
-    grid-area: l2;
-}
-
-.l3{
-    grid-area: l3;
-}
-
-.l4{
-    grid-area: l4;
-}
-
-.l5{
-    grid-area: l5;
-}
-
-.l6{
-    grid-area: l6;
-}
-
-.l7{
-    grid-area: l7;
-}
-
-.l8{
-    grid-area: l8;
-}
-
-.l9{
-    grid-area: l9;
-}
-
-.l10{
-    grid-area: l10;
-}
-
-.l11{
-    grid-area: l11;
-}
-
-.l12{
-    grid-area: l12;
-}
-
-.l13{
-    grid-area: l13;
-}
-
-.l14{
-    grid-area: l14;
+    "flogo company finfo support ."
+    ". company finfo support ."
+    ". company finfo . newsletter"
+    ". company finfo . newsletter"
+    ". company finfo . ."
+    ". . finfo . copyright"
+    ". . finfo . socials";
 }
 
 .copyright{
-  align-self: right;  
-}
+    grid-area: copyright;
+    text-align: right;  
+  }
+  
+  .socials{
+    grid-area: socials;
+      display: inline-block;
+      gap: 5px;
+  }
 
-.socials{
-    display: inline;
-}
+  .flogo{
+    grid-area: flogo;
+  }
 
-.padding-footer{
-    padding: 40px 24px;
+  .finfo{
+    grid-area: finfo;
+  }
 
-    @include lg{
-        padding-top: 36px;
-        padding-bottom: 36px;
-        padding-right: 64px;
-        padding-left: 269px; 
-    }
-}
+  .support{
+    grid-area: support;
+  }
+
+  .company{
+    grid-area: company;
+  }
+
+  .newsletter{
+    grid-area: newsletter;
+  }
+  
+  .padding-footer{
+      padding: 5% 5%;
+  }
+
+  

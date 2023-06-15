@@ -336,9 +336,55 @@ template {
   padding-top: 120px;
 }
 
+.first {
+  background-color: cyan;
+}
+
+.second {
+  background-color: red;
+}
+
+.third {
+  background-color: lime;
+}
+
+.overall-padding {
+  padding-top: 10%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
+.show-menu {
+  display: block !important;
+}
+
+@media (min-width: 992px) {
+  .hide-for-lg {
+    display: none;
+  }
+}
+
 /* =============
     Typography
 ============= */
+.body {
+  font-family: "Mulish", sans-serif;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+h4 {
+  font-weight: 700;
+}
+
 /* =============
     Buttons
 ============= */
@@ -363,9 +409,131 @@ textarea {
 /* =============
     Navigation
 ============= */
+nav {
+  display: none;
+  background-color: #000;
+  height: 100vh;
+  padding: 16px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50vw;
+}
+@media (min-width: 992px) {
+  nav {
+    background-color: #fff;
+    display: block;
+    height: 100%;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+}
+nav div {
+  display: flex;
+  justify-content: flex-end;
+}
+nav div button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+nav div button:hover {
+  cursor: pointer;
+}
+nav ul {
+  height: 100%;
+  padding-top: 20%;
+}
+@media (min-width: 992px) {
+  nav ul {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 0;
+  }
+}
+nav ul li {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+  text-align: right;
+}
+@media (min-width: 992px) {
+  nav ul li {
+    border-left: 1px solid #000;
+    margin-bottom: 0;
+    margin-left: 16px;
+    padding-left: 24px;
+  }
+}
+nav ul li a:link,
+nav ul li a:visited {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  text-decoration: none;
+  transition: 0.25s;
+}
+@media (min-width: 992px) {
+  nav ul li a:link,
+  nav ul li a:visited {
+    color: #000;
+  }
+}
+nav ul li a:link:hover, nav ul li a:link:active,
+nav ul li a:visited:hover,
+nav ul li a:visited:active {
+  color: #7d7d7d;
+}
+nav ul li:first-child {
+  border: none;
+}
+
 /* =============
     Header
 ============= */
+header.container {
+  padding: 30px 10px;
+  position: fixed;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+}
+header.container .content {
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-template-areas: "logo burger";
+}
+@media (min-width: 992px) {
+  header.container .content {
+    grid-template-areas: "logo nav";
+  }
+}
+header.container .content .logo {
+  color: #fff;
+  font-size: 40px;
+}
+header.container .content .burger-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  header.container .content .burger-container {
+    display: none;
+  }
+}
+header.container .content .burger-container button {
+  border: none;
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+}
+header.container .content .burger-container button:hover {
+  cursor: pointer;
+}
+
 /* =============
     Footer
 ============= */
@@ -374,86 +542,45 @@ footer {
   color: #fff;
 }
 
-.links {
+.footer-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "l1 l2 l3" "l4 l5 l6" "l7 l8 ." "l9 l10 ." "l11 l12 ." ". l13 ." ". l14 .";
-}
-
-.l1 {
-  grid-area: l1;
-}
-
-.l2 {
-  grid-area: l2;
-}
-
-.l3 {
-  grid-area: l3;
-}
-
-.l4 {
-  grid-area: l4;
-}
-
-.l5 {
-  grid-area: l5;
-}
-
-.l6 {
-  grid-area: l6;
-}
-
-.l7 {
-  grid-area: l7;
-}
-
-.l8 {
-  grid-area: l8;
-}
-
-.l9 {
-  grid-area: l9;
-}
-
-.l10 {
-  grid-area: l10;
-}
-
-.l11 {
-  grid-area: l11;
-}
-
-.l12 {
-  grid-area: l12;
-}
-
-.l13 {
-  grid-area: l13;
-}
-
-.l14 {
-  grid-area: l14;
+  grid-template-columns: 20% 10% 10% 10% 40%;
+  grid-template-areas: "flogo company finfo support ." ". company finfo support ." ". company finfo . newsletter" ". company finfo . newsletter" ". company finfo . ." ". . finfo . copyright" ". . finfo . socials";
 }
 
 .copyright {
-  align-self: right;
+  grid-area: copyright;
+  text-align: right;
 }
 
 .socials {
-  display: inline;
+  grid-area: socials;
+  display: inline-block;
+  gap: 5px;
+}
+
+.flogo {
+  grid-area: flogo;
+}
+
+.finfo {
+  grid-area: finfo;
+}
+
+.support {
+  grid-area: support;
+}
+
+.company {
+  grid-area: company;
+}
+
+.newsletter {
+  grid-area: newsletter;
 }
 
 .padding-footer {
-  padding: 40px 24px;
-}
-@media (min-width: 992px) {
-  .padding-footer {
-    padding-top: 36px;
-    padding-bottom: 36px;
-    padding-right: 64px;
-    padding-left: 269px;
-  }
+  padding: 5% 5%;
 }
 
 /* =============
@@ -469,7 +596,7 @@ footer {
   .information {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "info1 info2 info3" "info4 info5 info6";
+    grid-template-areas: "sec-info . ." "info1 info2 info3" "info4 info5 info6";
   }
 }
 
@@ -513,6 +640,10 @@ footer {
 
 .padding {
   padding: 48px 56px;
+}
+
+.sec-info {
+  grid-area: sec-info;
 }
 
 /* =============
@@ -620,39 +751,47 @@ footer {
 .layout {
   display: grid;
   grid-template-columns: 20% 60% 20%;
-  grid-template-areas: "photo name rating" ". date ." ". text ." ". comment like" ". share .";
+  grid-template-areas: "profile details rating" ". word word" ". comment like" ". share .";
+}
+@media (min-width: 992px) {
+  .layout {
+    display: grid;
+    grid-template-columns: 10% 15% 15% 15% 45%;
+    grid-template-areas: "profile details . . rating" ". word word word word" ". comment share like .";
+  }
 }
 
-.photo {
-  grid-area: photo;
+.profile {
+  grid-area: profile;
 }
 
-.name {
-  grid-area: name;
+.details {
+  grid-area: details;
 }
 
 .rating {
   grid-area: rating;
+  display: inline-block;
+  align-content: right;
 }
 
-.date {
-  grid-area: date;
-}
-
-.text {
-  grid-area: text;
+.word {
+  grid-area: word;
 }
 
 .comment {
   grid-area: comment;
+  display: inline-block;
 }
 
 .like {
   grid-area: like;
+  display: inline-block;
 }
 
 .share {
   grid-area: share;
+  display: inline-block;
 }
 
 .button-text-rev {
@@ -666,21 +805,57 @@ ul {
 
 .review1 {
   grid-area: review1;
+  border-width: 1px;
+  border-radius: 8px;
+  border-color: #000;
+  border-style: solid;
+  height: 400px;
+}
+@media (min-width: 992px) {
+  .review1 {
+    height: 280px;
+  }
 }
 
 .review2 {
   grid-area: review2;
+  border-width: 1px;
+  border-radius: 8px;
+  border-color: #000;
+  border-style: solid;
+  height: 400px;
+}
+@media (min-width: 992px) {
+  .review2 {
+    height: 280px;
+  }
 }
 
 .review3 {
   grid-area: review3;
-}
-
-.review-border {
-  grid-area: review-border;
   border-width: 1px;
   border-radius: 8px;
   border-color: #000;
+  border-style: solid;
+  height: 400px;
+}
+@media (min-width: 992px) {
+  .review3 {
+    height: 280px;
+  }
+}
+
+.rev-padding {
+  padding: 16px;
+}
+
+.rev-spacing {
+  gap: 17px;
+}
+@media (min-width: 992px) {
+  .rev-spacing {
+    gap: 72px;
+  }
 }
 
 /* =============
@@ -693,7 +868,7 @@ ul {
   .sp {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "racks buns kettle";
+    grid-template-areas: "sec-sp . ." "racks buns kettle";
   }
 }
 
@@ -725,6 +900,10 @@ ul {
 
 .serial {
   grid-area: serial;
+}
+
+.sec-sp {
+  grid-area: sec-sp;
 }
 
 /* =============
@@ -802,7 +981,17 @@ button {
   border: 1px;
   border-radius: 8px;
   border-color: #000;
+  border-style: solid;
+  border-width: 314px;
   padding: 16px;
+}
+@media (min-width: 992px) {
+  .thank {
+    border-radius: 8px;
+    border-color: #000;
+    border-style: solid;
+    border-width: 462px;
+  }
 }
 
 /* =============
@@ -814,6 +1003,8 @@ button {
   grid-template-areas: "p-name p-photo" "p-color p-qty";
   border: 1px;
   border-radius: 8px 8px 0px 0px;
+  border-style: solid;
+  width: 390px;
 }
 @media (min-width: 992px) {
   .recap {
@@ -821,6 +1012,9 @@ button {
     grid-template-columns: 50% 50%;
     grid-template-areas: "p-name p-photo" "p-color p-qty";
     border-radius: 8px;
+    border: 1px;
+    border-style: solid;
+    width: 486px;
   }
 }
 
@@ -838,4 +1032,22 @@ button {
 
 .p-qty {
   grid-area: p-qty;
+}
+
+/* =============
+    Checkout
+============= */
+.checkout {
+  display: grid;
+  grid-template-columns: 162.75px 50% 50% 162.75px;
+  grid-template-areas: ". where what .";
+  margin-bottom: 10px;
+}
+
+.where {
+  grid-area: where;
+}
+
+.what {
+  grid-area: what;
 }

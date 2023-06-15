@@ -1,3 +1,49 @@
 /* =============
     Header
 ============= */
+
+header.container{
+    padding: 30px 10px;
+    position: fixed;
+    width: 100%;
+    background-color: $black;
+    color: $white;
+
+    .content{
+
+        display: grid;
+        grid-template-columns: 50% auto;
+        grid-template-areas: "logo burger";
+
+        @include lg{
+            grid-template-areas: "logo nav";
+
+        }
+
+        .logo{
+            color: $white;
+            font-size: 40px;
+        }
+
+        .burger-container{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            @include lg{
+                display: none;
+            }
+
+            button{
+                border: none;
+                background-color: $black;
+                color: $white;
+                font-size: 20px;
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

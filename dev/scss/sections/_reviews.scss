@@ -23,43 +23,54 @@
     display: grid;
     grid-template-columns: 20% 60% 20%;
     grid-template-areas: 
-    "photo name rating"
-    ". date ."
-    ". text ."
+    "profile details rating"
+    ". word word"
     ". comment like"
     ". share .";
+
+    @include lg{
+      display: grid;
+      grid-template-columns: 10% 15% 15% 15% 45%;
+      grid-template-areas:
+      "profile details . . rating"
+      ". word word word word"
+      ". comment share like ."
+    }
 }
 
-.photo{
-   grid-area: photo; 
+.profile{
+   grid-area: profile; 
 }
 
-.name{
-    grid-area: name; 
+.details{
+    grid-area: details; 
  }
 
  .rating{
-    grid-area: rating; 
+    grid-area: rating;
+    display: inline-block;
+    align-content: right;
  }
 
- .date{
-    grid-area: date; 
- }
-
- .text{
-    grid-area: text; 
+ .word{
+    grid-area: word; 
  }
 
  .comment{
-    grid-area: comment; 
+    grid-area: comment;
+    display: inline-block;
+ 
  }
 
  .like{
-    grid-area: like; 
+    grid-area: like;
+    display: inline-block;
+ 
  }
 
  .share{
     grid-area: share; 
+    display: inline-block;
  }
 
  .button-text-rev{
@@ -73,20 +84,50 @@
 
  .review1{
     grid-area: review1;
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: $black;
+    border-style: solid;
+    height: 400px;
+    @include lg{
+      height: 280px; 
+    }
 
  }
 
  .review2{
     grid-area: review2;
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: $black;
+    border-style: solid;
+    height: 400px;
+    @include lg{
+      height: 280px; 
+    }
+
  }
 
  .review3{
     grid-area: review3;
- }
-
- .review-border{
-    grid-area: review-border;
     border-width: 1px;
     border-radius: 8px;
     border-color: $black;
+    border-style: solid;
+    height: 400px;
+    @include lg{
+      height: 280px; 
+    }
+ }
+
+ .rev-padding{
+   padding: 16px;
+ }
+
+ .rev-spacing{
+   gap: 17px;
+
+   @include lg{
+      gap: 72px;
+   }
  }

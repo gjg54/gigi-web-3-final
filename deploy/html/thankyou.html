@@ -11,18 +11,40 @@
 
   <body>
 
+
 <!--header-->
-<header>
-  <div>
-    <img src="../img/header/logo.png" alt="logo"/>
-    <img src="../img/header/hamburger-menu.png" alt="hamburger menu"/>
-    <img src="../img/header/search.png" alt="search button"/>
-    <img src="../img/header/cart.png" alt="cart button"/>
-</div>
+<header class="container">
+  <div class="content">
+      <div class="logo">
+          <img src="img/header/logo.png" alt="smeg logo"/>
+      </div>
+
+      <!-- Mobile Nav Icon, Won't Display on Desktop & Up-->
+      <div class="burger-container">
+          <button id="burger-btn">
+              <img src="img/header/hamburger-menu.png" alt="burger menu"/>
+          </button>
+      </div>
+      
+      <!-- Menu Alters Between Mobile/Tablet & Desktop-->
+      <nav id="main-menu">
+          <div class="hide-for-lg">
+              <button id="close-btn">
+                  <i class="fa-solid fa-xmark-large"></i>
+              </button> 
+          </div>
+          <ul>
+              <li><a href="#">Contact</a></li>
+              <li><a href="checkout.html">Procucts</a></li>
+              <li><a href="thankyou.html">Search</a></li>
+              <li><a href="../index.html">Cart</a></li>
+          </ul>
+      </nav>
+  </div>
 </header>
 
 <!--thank you message-->
-<section class="container">
+<section class="container overall-padding">
 <div class="content">
   <div class="thank">
     <h1>Thank you for purchasing:</h1>
@@ -35,34 +57,40 @@
 </section>
 
 <!--footer-->
-<footer class="padding-footer">
+<footer class="padding-footer footer-grid">
   
-  <div>
+  <div class="flogo">
     <img src="../img/header/logo.png" alt="logo"/>
   </div>
   
-  <div>
-    <ul class="links">
-    
-    <li class="l1">Company</li>
-    <li class="l2">Info</li>
-    <li class="l3">Support</li>
-    <li class="l4">Legal</li>
-    <li class="l5">Products</li>
-    <li class="l6">Contacts</li>
-    <li class="l7">Disclaimer</li>
-    <li class="l8">Aesthetics</li>
-    <li class="l9">Privacy Policy</li>
-    <li  class="l0">Inspiration</li>
-    <li class="l11">Cookie Notice</li>
-    <li class="l12">About</li>
-    <li class="l13">Venders</li>
-    <li class="l14">Smeg in the world</li>
-    
-    </ul>
-  </div>
   
-  <div>
+    
+    <div class="company">
+      <h4>Company</h4>
+      <h5>Legal</h5>
+      <h5>Disclaimer</h5>
+      <h5>Privacy Policy</h5>
+      <h5>Cookie Notice</h5>
+    </div>
+  
+    <div class="finfo">
+      <h4>Info</h4>
+      <h5>Products</h5>
+      <h5>Aesthetic</h5>
+      <h5>Inspiration</h5>
+      <h5>About</h5>
+      <h5>Venders</h5>
+      <h5>Smeg in the world</h5>
+    </div>
+  
+    <div class="support">
+      <h4>Support</h4>
+      <h5>Contacts</h5>
+    </div>
+    
+  
+  
+  <div class="newsletter">
     <h6>Sign up for our newsletter</h6>
     <form action="#"> <input type="Email" placeholder="Email"> <button>Subscribe</button></form>
   </div>
@@ -72,12 +100,12 @@
   </div>
   
   <div class="socials">
-    <ul>
-      <li><img src="../img/footer/instagram.png" alt="instagram"/></li>
-      <li><img src="../img/footer/youtube.png" alt="youtube"/></li>
-      <li><img src="../img/footer/facebook.png" alt="facebook"/></li>
-      <li><img src="../img/footer/linkedin.png" alt="linkedin"/></li>
-    </ul>
+    
+      <img src="../img/footer/instagram.png" alt="instagram"/>
+      <img src="../img/footer/youtube.png" alt="youtube"/>
+      <img src="../img/footer/facebook.png" alt="facebook"/>
+      <img src="../img/footer/linkedin.png" alt="linkedin"/>
+    
   </div>
     </footer>
 
